@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>https://lmyaurora.github.io/404/404.html</loc>
+        <lastmod>2019-05-28T15:42:24.269Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://lmyaurora.github.io/404/</loc>
         <lastmod>2019-05-28T15:39:27.182Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -38,20 +45,6 @@
     <url>
         <loc>https://lmyaurora.github.io/about/</loc>
         <lastmod>2019-05-28T15:04:37.237Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://lmyaurora.github.io/404.html</loc>
-        <lastmod>2019-05-28T11:34:46.542Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://lmyaurora.github.io/404/404.html</loc>
-        <lastmod>2019-05-28T11:34:46.542Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
