@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lmyaurora.github.io/"/>
-  <updated>2019-05-28T02:45:36.088Z</updated>
+  <updated>2019-06-04T05:21:44.850Z</updated>
   <id>https://lmyaurora.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arch Linux的安装、配置、优化及美化（一）</title>
+    <link href="https://lmyaurora.github.io/post/7e38c18b.html"/>
+    <id>https://lmyaurora.github.io/post/7e38c18b.html</id>
+    <published>2019-06-04T05:11:25.000Z</published>
+    <updated>2019-06-04T05:21:44.850Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。
+&lt;/code&gt;&lt;/pre&gt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://lmyaurora.github.io/categories/Linux/"/>
+    
+    
+      <category term="Arch Linux" scheme="https://lmyaurora.github.io/tags/Arch-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
