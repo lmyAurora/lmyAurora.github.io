@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="bitAurora">
 <meta property="og:description" content="本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-04T06:06:53.938Z">
+<meta property="og:updated_time" content="2019-06-04T10:59:02.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arch Linux的安装、配置、优化及美化（一）">
 <meta name="twitter:description" content="本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。">
@@ -473,7 +473,7 @@
                 
               
 
-              <time title="Created: 2019-06-04 13:11:25 / Modified: 14:06:53" itemprop="dateCreated datePublished" datetime="2019-06-04T13:11:25+08:00">2019-06-04</time>
+              <time title="Created: 2019-06-04 13:11:25 / Modified: 18:59:02" itemprop="dateCreated datePublished" datetime="2019-06-04T13:11:25+08:00">2019-06-04</time>
             
 
             
@@ -544,7 +544,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">612</span>
+                <span title="Symbols count in article">957</span>
               
 
               
@@ -581,15 +581,20 @@
         <p>本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。<br><a id="more"></a></p>
 <h2 id="一、安装准备"><a href="#一、安装准备" class="headerlink" title="一、安装准备"></a>一、安装准备</h2><p>安装前的准备如下：</p>
 <ul>
-<li>一台能上网的电脑，注意安装过程中必须联网，无线网或者有线网均可。</li>
+<li>一台能上网的64位电脑。注意官方的Arch Linux只支持64位系统。注意安装过程中必须联网，无线网或者有线网均可。</li>
 <li>10G以上的硬盘空间（视个人情况而定），用于安装系统。</li>
 <li>Arch Linux镜像，下载地址为<a href="http://mirrors.ustc.edu.cn/archlinux/iso/2019.06.01/" target="_blank" rel="noopener">中科大镜像源</a>。</li>
 <li>一个大于2G的U盘，用于制作Arch Linux启动盘。注意备份U盘内的资料，启动光盘制作过程中会对U盘进行格式化。注意U盘型号不要太老，否则可能会出现无法探测到光盘、光盘挂载失败等错误。</li>
 <li>U盘启动盘制作工具，推荐<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32DiskImager</a>，UltraISO有时会出现错误导致U盘无法被识别。</li>
 <li><a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">Arch Wiki</a>，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。</li>
 </ul>
-<h2 id="二、安装过程"><a href="#二、安装过程" class="headerlink" title="二、安装过程"></a>二、安装过程</h2><h3 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h3><p>启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。<br>U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。<br>恢复U盘可以使用<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。</p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>
+<h2 id="二、安装过程"><a href="#二、安装过程" class="headerlink" title="二、安装过程"></a>二、安装过程</h2><h3 id="1-验证签名"><a href="#1-验证签名" class="headerlink" title="1.验证签名"></a>1.验证签名</h3><p>建议在使用前验证映像签名。<br>在安装了GnuPG的系统上，通过将PGP签名（在Checksums下）下载到ISO目录并使用以下命令进行验证来执行此操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --keyserver-options auto-key-retrieve --verify archlinux- version -x86_64.iso.sig</span><br></pre></td></tr></table></figure>
+<h3 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h3><p>启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。<br>U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。<br>恢复U盘可以使用<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。</p>
+<h3 id="2-进入Live系统"><a href="#2-进入Live系统" class="headerlink" title="2.进入Live系统"></a>2.进入Live系统</h3><p>设置电脑从U盘启动，然后选择“Boot Arch Linux (x86_64)”选项即可进入Live系统。之后将以root用户身份登陆一个虚拟控制台，并显示zsh shell提示符。</p>
+<h3 id="3-设置键盘布局"><a href="#3-设置键盘布局" class="headerlink" title="3.设置键盘布局"></a>3.设置键盘布局</h3><p>默认的控制台键盘映射为US键盘，一般不需要修改。</p>
+<p>可用的键盘布局可以通过以下命令</p>
+
       
     </div>
 
@@ -859,7 +864,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装准备"><span class="nav-number">1.</span> <span class="nav-text">一、安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装过程"><span class="nav-number">2.</span> <span class="nav-text">二、安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-制作U盘启动盘"><span class="nav-number">2.1.</span> <span class="nav-text">1.制作U盘启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2"><span class="nav-number">2.2.</span> <span class="nav-text">2.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装准备"><span class="nav-number">1.</span> <span class="nav-text">一、安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装过程"><span class="nav-number">2.</span> <span class="nav-text">二、安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证签名"><span class="nav-number">2.1.</span> <span class="nav-text">1.验证签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-制作U盘启动盘"><span class="nav-number">2.2.</span> <span class="nav-text">1.制作U盘启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进入Live系统"><span class="nav-number">2.3.</span> <span class="nav-text">2.进入Live系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置键盘布局"><span class="nav-number">2.4.</span> <span class="nav-text">3.设置键盘布局</span></a></li></ol></li></ol></div>
             
 
           </div>
