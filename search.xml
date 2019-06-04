@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Arch Linux的安装、配置、优化及美化（一）]]></title>
-    <url>%2Fpost%2F7e38c18b.html</url>
-    <content type="text"><![CDATA[本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。 一、安装准备安装前的准备如下： 一台能上网的电脑，注意安装过程中必须联网，无线网或者有线网均可。 10G以上的硬盘空间（视个人情况而定），用于安装系统。 Arch Linux镜像，下载地址为中科大镜像源。 一个大于2G的U盘，用于制作Arch Linux启动盘。注意备份U盘内的资料，启动光盘制作过程中会对U盘进行格式化。注意U盘型号不要太老，否则可能会出现无法探测到光盘、光盘挂载失败等错误。 U盘启动盘制作工具，推荐Win32DiskImager，UltraISO有时会出现错误导致U盘无法被识别。 Arch Wiki，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。 二、安装过程1.制作U盘启动盘启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。恢复U盘可以使用DiskGenius，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。 2.]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Arch Linux的安装、配置、优化及美化（一）</title>
+      <link href="/post/7e38c18b.html"/>
+      <url>/post/7e38c18b.html</url>
+      
+        <content type="html"><![CDATA[<p>本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。<br><a id="more"></a></p><h2 id="一、安装准备"><a href="#一、安装准备" class="headerlink" title="一、安装准备"></a>一、安装准备</h2><p>安装前的准备如下：</p><ul><li>一台能上网的电脑，注意安装过程中必须联网，无线网或者有线网均可。</li><li>10G以上的硬盘空间（视个人情况而定），用于安装系统。</li><li>Arch Linux镜像，下载地址为<a href="http://mirrors.ustc.edu.cn/archlinux/iso/2019.06.01/" target="_blank" rel="noopener">中科大镜像源</a>。</li><li>一个大于2G的U盘，用于制作Arch Linux启动盘。注意备份U盘内的资料，启动光盘制作过程中会对U盘进行格式化。注意U盘型号不要太老，否则可能会出现无法探测到光盘、光盘挂载失败等错误。</li><li>U盘启动盘制作工具，推荐<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32DiskImager</a>，UltraISO有时会出现错误导致U盘无法被识别。</li><li><a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">Arch Wiki</a>，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。</li></ul><h2 id="二、安装过程"><a href="#二、安装过程" class="headerlink" title="二、安装过程"></a>二、安装过程</h2><h3 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h3><p>启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。<br>U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。<br>恢复U盘可以使用<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。</p><h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>]]></content>
+      
+      
       <categories>
-        <category>Linux</category>
+          
+          <category> Linux </category>
+          
       </categories>
-      <tags>
-        <tag>Arch Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fpost%2F4a17b156.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 123456#include&lt;stdio.h&gt;int main()&#123; printf("Hello World!\n"); return 0;&#125;]]></content>
+      
+      
+        <tags>
+            
+            <tag> Arch Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/post/4a17b156.html"/>
+      <url>/post/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>Test</category>
+          
+          <category> Test </category>
+          
       </categories>
-      <tags>
-        <tag>Test</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
