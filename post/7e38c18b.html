@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="bitAurora">
 <meta property="og:description" content="本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-04T10:59:02.448Z">
+<meta property="og:updated_time" content="2019-06-04T11:18:33.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arch Linux的安装、配置、优化及美化（一）">
 <meta name="twitter:description" content="本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。">
@@ -473,7 +473,7 @@
                 
               
 
-              <time title="Created: 2019-06-04 13:11:25 / Modified: 18:59:02" itemprop="dateCreated datePublished" datetime="2019-06-04T13:11:25+08:00">2019-06-04</time>
+              <time title="Created: 2019-06-04 13:11:25 / Modified: 19:18:33" itemprop="dateCreated datePublished" datetime="2019-06-04T13:11:25+08:00">2019-06-04</time>
             
 
             
@@ -544,7 +544,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">957</span>
+                <span title="Symbols count in article">1.4k</span>
               
 
               
@@ -588,12 +588,21 @@
 <li>U盘启动盘制作工具，推荐<a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32DiskImager</a>，UltraISO有时会出现错误导致U盘无法被识别。</li>
 <li><a href="https://wiki.archlinux.org/" target="_blank" rel="noopener">Arch Wiki</a>，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。</li>
 </ul>
-<h2 id="二、安装过程"><a href="#二、安装过程" class="headerlink" title="二、安装过程"></a>二、安装过程</h2><h3 id="1-验证签名"><a href="#1-验证签名" class="headerlink" title="1.验证签名"></a>1.验证签名</h3><p>建议在使用前验证映像签名。<br>在安装了GnuPG的系统上，通过将PGP签名（在Checksums下）下载到ISO目录并使用以下命令进行验证来执行此操作：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --keyserver-options auto-key-retrieve --verify archlinux- version -x86_64.iso.sig</span><br></pre></td></tr></table></figure>
-<h3 id="1-制作U盘启动盘"><a href="#1-制作U盘启动盘" class="headerlink" title="1.制作U盘启动盘"></a>1.制作U盘启动盘</h3><p>启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。<br>U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。<br>恢复U盘可以使用<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。</p>
-<h3 id="2-进入Live系统"><a href="#2-进入Live系统" class="headerlink" title="2.进入Live系统"></a>2.进入Live系统</h3><p>设置电脑从U盘启动，然后选择“Boot Arch Linux (x86_64)”选项即可进入Live系统。之后将以root用户身份登陆一个虚拟控制台，并显示zsh shell提示符。</p>
-<h3 id="3-设置键盘布局"><a href="#3-设置键盘布局" class="headerlink" title="3.设置键盘布局"></a>3.设置键盘布局</h3><p>默认的控制台键盘映射为US键盘，一般不需要修改。</p>
-<p>可用的键盘布局可以通过以下命令</p>
+<h2 id="二、安装过程"><a href="#二、安装过程" class="headerlink" title="二、安装过程"></a>二、安装过程</h2><h3 id="1-验证签名"><a href="#1-验证签名" class="headerlink" title="1.验证签名"></a>1.验证签名</h3><p>建议在使用前验证映像签名，特别是从HTTP镜像下载时。<br>在安装了GnuPG的系统上，通过将PGP签名（在Checksums下）下载到ISO目录并使用以下命令进行验证来执行此操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig</span><br></pre></td></tr></table></figure>
+<p>或者从现有的Arch Linux安装运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman-key -v archlinux-version-x86_64.iso.sig</span><br></pre></td></tr></table></figure>
+<h3 id="2-制作U盘启动盘"><a href="#2-制作U盘启动盘" class="headerlink" title="2.制作U盘启动盘"></a>2.制作U盘启动盘</h3><p>启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。<br>U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。<br>恢复U盘可以使用<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">DiskGenius</a>，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。</p>
+<h3 id="3-进入Live系统"><a href="#3-进入Live系统" class="headerlink" title="3.进入Live系统"></a>3.进入Live系统</h3><p>设置电脑从U盘启动，然后选择“Boot Arch Linux (x86_64)”选项即可进入Live系统。之后将以root用户身份登陆一个虚拟控制台，并显示zsh shell提示符。</p>
+<h3 id="4-设置键盘布局"><a href="#4-设置键盘布局" class="headerlink" title="4.设置键盘布局"></a>4.设置键盘布局</h3><p>默认的控制台键盘映射为US键盘，一般不需要修改。</p>
+<p>可用的键盘布局可以通过以下命令列出：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/share/kbd/keymaps/**/*.map.gz</span><br></pre></td></tr></table></figure>
+<p>要修改布局，可以将相应的文件名附加到loadkeys(1)，省略路径和文件扩展名。例如，要设置德语键盘布局：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">loadkeys de-latin1</span><br></pre></td></tr></table></figure>
+<h3 id="5-验证启动模式"><a href="#5-验证启动模式" class="headerlink" title="5.验证启动模式"></a>5.验证启动模式</h3><p>当前常用格式有UEFI+GPT或者BIOS+MBR，新电脑一般为UEFI启动。<br>如果在UEFI主板上启用了UEFI模式，Archiso将通过systemd-boot相应地启动Arch Linux。可以通过列出efivars目录来进行验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /sys/firmware/efi/efivars</span><br></pre></td></tr></table></figure>
+<p>如果显示目录不存在，则说明是在BIOS或CSM模式下引导系统（一般为BIOS）。有关详细信息，请参阅主板手册。</p>
+<h3 id="6-连接网络"><a href="#6-连接网络" class="headerlink" title="6.连接网络"></a>6.连接网络</h3><h4 id="手动配置网络"><a href="#手动配置网络" class="headerlink" title="手动配置网络"></a>手动配置网络</h4><p>首先检查</p>
 
       
     </div>
@@ -645,22 +654,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/post/4a17b156.html" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -732,7 +725,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -753,7 +746,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -774,7 +767,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -864,7 +857,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装准备"><span class="nav-number">1.</span> <span class="nav-text">一、安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装过程"><span class="nav-number">2.</span> <span class="nav-text">二、安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证签名"><span class="nav-number">2.1.</span> <span class="nav-text">1.验证签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-制作U盘启动盘"><span class="nav-number">2.2.</span> <span class="nav-text">1.制作U盘启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进入Live系统"><span class="nav-number">2.3.</span> <span class="nav-text">2.进入Live系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置键盘布局"><span class="nav-number">2.4.</span> <span class="nav-text">3.设置键盘布局</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装准备"><span class="nav-number">1.</span> <span class="nav-text">一、安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装过程"><span class="nav-number">2.</span> <span class="nav-text">二、安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证签名"><span class="nav-number">2.1.</span> <span class="nav-text">1.验证签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-制作U盘启动盘"><span class="nav-number">2.2.</span> <span class="nav-text">2.制作U盘启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-进入Live系统"><span class="nav-number">2.3.</span> <span class="nav-text">3.进入Live系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-设置键盘布局"><span class="nav-number">2.4.</span> <span class="nav-text">4.设置键盘布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-验证启动模式"><span class="nav-number">2.5.</span> <span class="nav-text">5.验证启动模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-连接网络"><span class="nav-number">2.6.</span> <span class="nav-text">6.连接网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动配置网络"><span class="nav-number">2.6.1.</span> <span class="nav-text">手动配置网络</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

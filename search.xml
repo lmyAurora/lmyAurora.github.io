@@ -3,23 +3,12 @@
   <entry>
     <title><![CDATA[Arch Linux的安装、配置、优化及美化（一）]]></title>
     <url>%2Fpost%2F7e38c18b.html</url>
-    <content type="text"><![CDATA[本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。 一、安装准备安装前的准备如下： 一台能上网的64位电脑。注意官方的Arch Linux只支持64位系统。注意安装过程中必须联网，无线网或者有线网均可。 10G以上的硬盘空间（视个人情况而定），用于安装系统。 Arch Linux镜像，下载地址为中科大镜像源。 一个大于2G的U盘，用于制作Arch Linux启动盘。注意备份U盘内的资料，启动光盘制作过程中会对U盘进行格式化。注意U盘型号不要太老，否则可能会出现无法探测到光盘、光盘挂载失败等错误。 U盘启动盘制作工具，推荐Win32DiskImager，UltraISO有时会出现错误导致U盘无法被识别。 Arch Wiki，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。 二、安装过程1.验证签名建议在使用前验证映像签名。在安装了GnuPG的系统上，通过将PGP签名（在Checksums下）下载到ISO目录并使用以下命令进行验证来执行此操作： 1$ gpg --keyserver-options auto-key-retrieve --verify archlinux- version -x86_64.iso.sig 1.制作U盘启动盘启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。恢复U盘可以使用DiskGenius，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。 2.进入Live系统设置电脑从U盘启动，然后选择“Boot Arch Linux (x86_64)”选项即可进入Live系统。之后将以root用户身份登陆一个虚拟控制台，并显示zsh shell提示符。 3.设置键盘布局默认的控制台键盘映射为US键盘，一般不需要修改。 可用的键盘布局可以通过以下命令]]></content>
+    <content type="text"><![CDATA[本文主要讲述了Arch Linux的安装、配置、优化以及美化的步骤与方法。 一、安装准备安装前的准备如下： 一台能上网的64位电脑。注意官方的Arch Linux只支持64位系统。注意安装过程中必须联网，无线网或者有线网均可。 10G以上的硬盘空间（视个人情况而定），用于安装系统。 Arch Linux镜像，下载地址为中科大镜像源。 一个大于2G的U盘，用于制作Arch Linux启动盘。注意备份U盘内的资料，启动光盘制作过程中会对U盘进行格式化。注意U盘型号不要太老，否则可能会出现无法探测到光盘、光盘挂载失败等错误。 U盘启动盘制作工具，推荐Win32DiskImager，UltraISO有时会出现错误导致U盘无法被识别。 Arch Wiki，最详细的Linux官方文档，基本所有Arch Linux问题都可以在上面找到答案。 二、安装过程1.验证签名建议在使用前验证映像签名，特别是从HTTP镜像下载时。在安装了GnuPG的系统上，通过将PGP签名（在Checksums下）下载到ISO目录并使用以下命令进行验证来执行此操作： 1gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig 或者从现有的Arch Linux安装运行： 1pacman-key -v archlinux-version-x86_64.iso.sig 2.制作U盘启动盘启动盘制作过程较为简单，只需注意U盘大小型号、启动盘制作软件、备份U盘资料等即可，具体情况请见安装准备。U盘被Win32DiskImager等工具制作成Linux启动盘之后只可以被Linux或MacOS识别而无法被Windows系统正常识别（格式化也不行）。恢复U盘可以使用DiskGenius，使用该软件先删除U盘所有分区保存更改，然后建立新分区保存更改并格式化。有时会报错无法进行格式化，则需要右键U盘图标选择清除磁盘数据，等待清除过程运行几秒后即可关闭清除程序，此时即可正常建立新分区并格式化。 3.进入Live系统设置电脑从U盘启动，然后选择“Boot Arch Linux (x86_64)”选项即可进入Live系统。之后将以root用户身份登陆一个虚拟控制台，并显示zsh shell提示符。 4.设置键盘布局默认的控制台键盘映射为US键盘，一般不需要修改。 可用的键盘布局可以通过以下命令列出： 1ls /usr/share/kbd/keymaps/**/*.map.gz 要修改布局，可以将相应的文件名附加到loadkeys(1)，省略路径和文件扩展名。例如，要设置德语键盘布局： 1loadkeys de-latin1 5.验证启动模式当前常用格式有UEFI+GPT或者BIOS+MBR，新电脑一般为UEFI启动。如果在UEFI主板上启用了UEFI模式，Archiso将通过systemd-boot相应地启动Arch Linux。可以通过列出efivars目录来进行验证： 1ls /sys/firmware/efi/efivars 如果显示目录不存在，则说明是在BIOS或CSM模式下引导系统（一般为BIOS）。有关详细信息，请参阅主板手册。 6.连接网络手动配置网络首先检查]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
         <tag>Arch Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fpost%2F4a17b156.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 123456#include&lt;stdio.h&gt;int main()&#123; printf("Hello World!\n"); return 0;&#125;]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>Test</tag>
       </tags>
   </entry>
 </search>
